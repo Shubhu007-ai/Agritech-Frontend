@@ -449,7 +449,7 @@
   --chat-bg: #ffffff;
   --chat-text: #1a1a1a;
 
-  --chat-header-bg: linear-gradient(135deg, #4caf50, #2e7d32);
+  --chat-header-bg: #333;
   --chat-header-text: #ffffff;
   --chat-header-border: rgba(255,255,255,0.1);
 
@@ -479,7 +479,7 @@
   --chat-voice-btn-icon: #2e7d32;
   --chat-voice-active: #ff3b30;
 
-  --chat-sidebar-bg: linear-gradient(135deg, #4caf50, #2e7d32);
+  --chat-sidebar-bg: #333;
   --chat-sidebar-text: #ffffff;
   --chat-sidebar-item-hover-bg: aliceblue;
   --chat-sidebar-item-hover-text: #000000;
