@@ -32,7 +32,7 @@ const Overview = () => {
                                 if (isLoggedIn) {
                                     navigate('/dashboard');
                                 } else {
-                                    navigate('/login');
+                                    navigate('/auth');
                                 }
                             }}
                         >
