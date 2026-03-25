@@ -7,6 +7,11 @@ const VideoCard = ({ video }) => {
   const navigate = useNavigate();
   const videoRef = useRef(null);
 
+  const optimizedUrl = video.videoUrl.replace(
+    "/upload/",
+    "/upload/q_auto,f_auto/"
+  );
+
   const handleMouseEnter = () => {
     if (videoRef.current) {
       videoRef.current.play();
@@ -24,7 +29,7 @@ const VideoCard = ({ video }) => {
     <div className="video-card">
       <video
         ref={videoRef}
-        src={`${import.meta.env.VITE_BACKEND_URL}${video.videoUrl}`}
+        src={video.videoUrl}
         muted
         preload="metadata"
         onMouseEnter={handleMouseEnter}
