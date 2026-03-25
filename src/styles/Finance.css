@@ -1,0 +1,333 @@
+.finance-page-container {
+    padding: 20px;
+    margin-top: 70px;
+    min-height: 100vh;
+    background: var(--finance-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER */
+.finance-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.finance-header h1 {
+    color: var(--heading-green);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.finance-header p {
+    color: var(--text-soft);
+    font-size: 1.1rem;
+}
+
+/* GRID */
+.finance-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}
+
+/* ELIGIBILITY CARD */
+.eligibility-card {
+    background: linear-gradient(135deg, var(--eligibility-gradient-start), var(--eligibility-gradient-end));
+    padding: 35px;
+    border-radius: 20px;
+    color: var(--white);
+    box-shadow: 0 15px 40px rgba(46, 125, 50, 0.3);
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.decorative-circle {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: var(--eligibility-circle);
+    border-radius: 50%;
+}
+
+.eligibility-title {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.eligibility-desc {
+    opacity: 0.9;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: var(--eligibility-text);
+}
+
+/* INPUT GROUP */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--eligibility-text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+    background: var(--input-bg);
+    color: var(--input-text);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* CHECK BUTTON */
+.check-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--check-btn-bg);
+    color: var(--check-btn-text);
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.check-btn:hover {
+    transform: scale(1.02);
+}
+
+/* LOAN RESULT */
+.loan-result {
+    margin-top: 35px;
+    text-align: center;
+    background: var(--loan-result-bg);
+    padding: 20px;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(5x);
+    backdrop-filter: blur(5px);
+}
+
+.loan-result p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--eligibility-text);
+}
+
+.loan-result h2 {
+    margin: 5px 0 0 0;
+    font-size: 2.5rem;
+    color: var(--loan-h2);
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* SCHEMES SECTION */
+.schemes-title {
+    color: var(--white);
+    border-left: 5px solid var(--check-btn-bg);
+    background: linear-gradient(135deg, var(--eligibility-gradient-start), var(--eligibility-gradient-end));
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 1em;
+}
+
+.schemes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.scheme-card {
+    background: var(--schemes-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid var(--scheme-border-left);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.scheme-card:hover {
+    transform: translateX(5px);
+}
+
+/* HEADER OF CARD */
+.scheme-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.scheme-header h3 {
+    margin: 0;
+    color: var(--heading-green);
+    font-size: 1.2rem;
+}
+
+.scheme-type {
+    font-size: 0.8rem;
+    background: var(--scheme-type-bg);
+    color: var(--scheme-type-text);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* SCHEME DESCRIPTION */
+.scheme-desc {
+    font-size: 0.95rem;
+    color: var(--scheme-desc);
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+.scheme-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+
+.scheme-interest {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.scheme-interest span {
+    color: var(--text-light);
+}
+
+.scheme-interest strong {
+    color: var(--scheme-interest-text);
+    background: var(--scheme-interest-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* BUTTON */
+.view-btn {
+    background: transparent;
+    border: 1px solid var(--view-btn-border);
+    color: var(--view-btn-text);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.view-btn:hover {
+    background: var(--view-btn-border);
+    color: var(--white);
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+    .finance-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .finance-header p {
+        font-size: 0.95rem;
+    }
+
+    .finance-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .eligibility-card {
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .eligibility-title {
+        font-size: 1.4rem;
+    }
+
+    .input-group input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .check-btn {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .loan-result h2 {
+        font-size: 2rem;
+    }
+
+    .scheme-card {
+        padding: 18px;
+    }
+
+    .scheme-header h3 {
+        font-size: 1rem;
+    }
+}
+
+/* TABLETS ≤768px */
+@media (max-width: 768px) {
+    .finance-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .finance-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scheme-card {
+        padding: 20px;
+    }
+}
+
+/* TABLETS ≤992px */
+@media (max-width: 992px) {
+    .finance-content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .eligibility-card {
+        padding: 28px;
+    }
+}
+
+/* SMALL DESKTOPS ≤1200px */
+@media (max-width: 1200px) {
+    .finance-content-grid {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}

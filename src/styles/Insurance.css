@@ -1,0 +1,292 @@
+/* Global Fixes */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Main Container */
+.insurance-page-container {
+    padding: 20px;
+    margin-top: 70px;
+    min-height: 100vh;
+    background: var(--insurance-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.insurance-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.insurance-header h1 {
+    color: var(--heading-green);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.insurance-header p {
+    color: var(--text-soft);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Main Grid */
+.insurance-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* Calculator Card */
+.insurance-card {
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: linear-gradient(135deg, var(--card-gradient-start), var(--card-gradient-end));
+    color: var(--card-text);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: fit-content;
+}
+
+.insurance-card h2 {
+    color: var(--card-text);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--card-border-light);
+    padding-bottom: 15px;
+}
+
+/* Form */
+.insurance-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--card-text);
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    font-size: 1rem;
+    background: var(--input-bg);
+    color: var(--input-text);
+    height: 4rem;
+}
+
+/* Button */
+.calc-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--calc-btn-bg);
+    color: var(--calc-btn-text);
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.calc-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: var(--result-bg);
+    border-radius: 10px;
+    border-left: 5px solid var(--result-left);
+    text-align: center;
+}
+
+.result-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--heading-green);
+    font-weight: 600;
+}
+
+.result-box h3 {
+    margin: 5px 0 0 0;
+    font-size: 2.2rem;
+    color: var(--result-title);
+    font-weight: 800;
+}
+
+/* Plans List */
+.plans-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-title {
+    color: var(--section-title-text);
+    border-left: 5px solid var(--calc-btn-bg);
+    background: linear-gradient(135deg, var(--section-title-bg-start), var(--section-title-bg-end));
+    padding: 1em;
+    margin: 0 0 20px 0;
+    border-radius: 1em;
+}
+
+/* Individual Plan Card */
+.plan-card {
+    background: var(--plan-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid var(--plan-border-left);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.plan-header h3 {
+    margin: 0;
+    color: var(--plan-header-text);
+    font-size: 1.3rem;
+}
+
+.provider {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: var(--provider-text);
+    font-style: italic;
+}
+
+.plan-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.plan-badge.government {
+    background: var(--badge-gov-bg);
+    color: var(--badge-gov-text);
+}
+
+.plan-badge.private {
+    background: var(--badge-private-bg);
+    color: var(--badge-private-text);
+}
+
+.plan-badge.premium {
+    background: var(--badge-premium-bg);
+    color: var(--badge-premium-text);
+}
+
+.plan-desc {
+    margin: 5px 0;
+    color: var(--plan-desc-text);
+    line-height: 1.5;
+}
+
+/* Footer */
+.plan-footer {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coverage {
+    font-weight: 700;
+    color: var(--coverage-text);
+    font-size: 1rem;
+}
+
+.coverage strong {
+    color: var(--coverage-strong);
+}
+
+.apply-btn {
+    color: var(--apply-btn-text);
+    background: var(--apply-btn-bg);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.apply-btn:hover {
+    background: var(--apply-btn-hover);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .insurance-header h1 {
+        font-size: 2rem;
+    }
+    .insurance-card {
+        padding: 22px;
+        border-radius: 14px;
+    }
+    .insurance-header p {
+        font-size: 0.9rem;
+    }
+    .plan-card {
+        padding: 18px;
+    }
+    .result-box h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .insurance-header h1 {
+        font-size: 1.7rem;
+    }
+    .insurance-header p {
+        font-size: 0.7rem;
+    }
+    .insurance-card {
+        padding: 18px;
+    }
+    .apply-btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    .plan-card {
+        padding: 16px;
+    }
+}

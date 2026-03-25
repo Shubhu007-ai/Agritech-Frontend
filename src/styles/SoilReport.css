@@ -1,0 +1,312 @@
+/* SoilReport.css */
+
+.sr-page-wrapper {
+    background-color: var(--sr-bg);
+    min-height: 100vh;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+    color: var(--sr-text-main);
+    transition: background-color 0.3s ease;
+}
+
+.sr-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* INPUT FORM */
+.sr-form-card {
+    background: linear-gradient(135deg, var(--sr-form-grad-start), var(--sr-form-grad-end));
+    color: var(--sr-form-text);
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--sr-card-shadow);
+}
+
+.sr-card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sr-card-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.sr-card-header p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.sr-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+    .sr-input-grid { grid-template-columns: 1fr; }
+}
+
+.sr-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sr-field label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.sr-field .sr-unit {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.sr-field input {
+    background: var(--sr-input-bg);
+    color: var(--sr-input-text);
+    border: 1px solid var(--sr-input-border);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.sr-field input:focus {
+    border-color: #5ad97e;
+    box-shadow: 0 0 0 2px rgba(90, 217, 126, 0.2);
+}
+
+.sr-main-btn {
+    width: 100%;
+    background: var(--sr-btn-bg);
+    color: var(--sr-btn-text);
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sr-main-btn:hover {
+    background: var(--sr-btn-hover);
+}
+
+/* RESULT DASHBOARD */
+.sr-report-paper {
+    background: var(--sr-card-bg);
+    border: 1px solid var(--sr-card-border);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 25px var(--sr-card-shadow);
+}
+
+.sr-report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--sr-input-border);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.sr-report-title h2 {
+    font-size: 1.8rem;
+    color: var(--sr-text-main);
+    margin-bottom: 5px;
+}
+
+.sr-date-badge {
+    color: var(--sr-text-soft);
+    font-size: 0.9rem;
+}
+
+/* 2-Column Grid for Results */
+.sr-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+    .sr-dashboard-grid { grid-template-columns: 1fr; }
+}
+
+.sr-analysis-card {
+    background: var(--sr-bg);
+    border: 1px solid var(--sr-card-border);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.sr-analysis-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--sr-text-main);
+}
+
+/* Progress Bars */
+.sr-stat-row {
+    margin-bottom: 15px;
+}
+
+.sr-stat-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.sr-progress-bg {
+    background: var(--sr-input-border);
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.sr-progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.sr-badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* Dynamic Colors */
+.sr-optimal { color: var(--sr-optimal-text); background: var(--sr-optimal-bg); }
+.sr-progress-fill.sr-optimal { background: var(--sr-optimal-text); }
+
+.sr-low { color: var(--sr-low-text); background: var(--sr-low-bg); }
+.sr-progress-fill.sr-low { background: var(--sr-low-text); }
+
+.sr-acidic, .sr-alkaline { color: var(--sr-warning-text); background: var(--sr-warning-bg); }
+
+/* pH Gauge Fix */
+.sr-ph-gauge-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sr-ph-gauge-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.sr-gauge-center {
+    width: 110px;
+    height: 110px;
+    background: var(--sr-bg);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sr-ph-value-large {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--sr-text-main);
+}
+
+.sr-ph-status-label {
+    font-size: 0.9rem;
+    color: var(--sr-text-soft);
+}
+
+/* Advisory Box */
+.sr-advisory-box {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.sr-advisory-box.sr-good { background: var(--sr-optimal-bg); border-left: 4px solid var(--sr-optimal-text); }
+.sr-advisory-box.sr-alert { background: var(--sr-warning-bg); border-left: 4px solid var(--sr-warning-text); }
+
+.sr-advisory-box ul { margin-left: 20px; margin-top: 10px; }
+
+/* History & Tables */
+.sr-history-section {
+    background: var(--sr-card-bg);
+    border: 1px solid var(--sr-card-border);
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.sr-history-table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.sr-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.sr-history-table th {
+    padding: 12px;
+    background: var(--sr-input-bg);
+    color: var(--sr-text-main);
+    border-bottom: 2px solid var(--sr-input-border);
+}
+
+.sr-history-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--sr-input-border);
+    color: var(--sr-text-soft);
+}
+
+/* Buttons */
+.sr-action-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.sr-secondary-btn {
+    background: transparent;
+    color: var(--sr-text-main);
+    border: 1px solid var(--sr-input-border);
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sr-download-btn {
+    background: var(--sr-btn-bg);
+    color: var(--sr-btn-text);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}

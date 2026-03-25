@@ -1,0 +1,234 @@
+.video-detail-wrapper {
+  min-height: 100vh;
+  padding: 130px 50px 70px 50px;
+  background: var(--view-bg);
+  color: var(--view-text-main);
+}
+
+/* GRID */
+.video-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 50px;
+}
+
+/* MAIN VIDEO */
+.premium-video {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px var(--view-video-shadow);
+  transition: 0.3s ease;
+}
+
+.premium-video:hover {
+  box-shadow: 0 20px 50px var(--view-video-hover-shadow);
+}
+
+/* VIDEO INFO */
+.video-info {
+  margin-top: 28px;
+  color: var(--view-text-main);
+}
+
+.video-info h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--view-title);
+}
+
+.video-meta {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 18px;
+  color: var(--view-text-soft);
+  font-size: 14px;
+}
+
+.badge {
+  background: var(--view-badge-bg);
+  color: var(--view-badge-text);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ICON ACTIONS */
+.icon-actions button {
+  background: transparent;
+  border: none;
+  color: var(--view-text-soft);
+  cursor: pointer;
+  margin-left: 12px;
+  font-size: 18px;
+  transition: 0.25s;
+}
+
+.icon-actions button:hover {
+  color: var(--view-accent);
+  transform: scale(1.15);
+}
+
+/* FARMER INFO */
+.farmer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-top: 10px;
+  border-top: 1px solid var(--view-card-border);
+}
+
+.avatar-circle {
+  width: 46px;
+  height: 46px;
+  background: var(--view-avatar-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--view-avatar-text);
+  font-size: 16px;
+  box-shadow: 0 4px 12px var(--view-avatar-shadow);
+}
+
+/* SIDEBAR */
+.video-right {
+  background: var(--view-card-bg);
+  padding: 28px;
+  border-radius: 22px;
+  height: fit-content;
+  box-shadow: 0 12px 35px var(--view-card-shadow);
+  border: 1px solid var(--view-card-border);
+}
+
+.video-right h3 {
+  color: var(--view-title);
+  font-weight: 600;
+}
+
+/* RELATED CARDS */
+.related-card {
+  margin-top: 18px;
+  padding: 12px;
+  background: var(--view-related-bg);
+  border-radius: 14px;
+  transition: 0.25s;
+  border: 1px solid var(--view-card-border);
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.related-card:hover {
+  background: var(--view-related-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px var(--view-related-shadow);
+}
+
+.related-thumb {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--view-thumb-border);
+}
+
+.related-info {
+  flex: 1;
+}
+
+.related-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--view-text-main);
+}
+
+.related-meta {
+  font-size: 12px;
+  color: var(--view-text-soft);
+}
+
+/* EMPTY STATE */
+.related-card.empty {
+  justify-content: center;
+  color: var(--view-text-soft);
+}
+
+.related-card.empty:hover {
+  background: var(--view-related-bg);
+  transform: none;
+  box-shadow: none;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1200px) {
+  .video-content {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+  }
+  .video-detail-wrapper {
+    padding: 120px 40px 60px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .video-content {
+    grid-template-columns: 1fr;
+  }
+  .video-right {
+    margin-top: 40px;
+  }
+  .video-detail-wrapper {
+    padding: 110px 30px 60px 30px;
+  }
+  .video-info h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-detail-wrapper {
+    padding: 100px 20px 50px 20px;
+  }
+  .video-meta {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .premium-video {
+    border-radius: 16px;
+  }
+  .video-right {
+    padding: 20px;
+  }
+  .related-thumb {
+    width: 90px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-detail-wrapper {
+    padding: 90px 15px 40px 15px;
+  }
+  .video-info h1 {
+    font-size: 20px;
+  }
+  .badge {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+  .related-card {
+    flex-direction: column;
+  }
+  .related-thumb {
+    width: 100%;
+    height: 160px;
+  }
+}

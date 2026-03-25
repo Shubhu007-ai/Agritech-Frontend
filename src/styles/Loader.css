@@ -1,0 +1,15 @@
+.loader-circle {
+  width: 45px;
+  height: 45px;
+  border: 4px solid #c3e6c3;
+  border-top-color: #2b7a0b;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

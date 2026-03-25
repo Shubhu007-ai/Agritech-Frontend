@@ -1,0 +1,270 @@
+/* MAIN PAGE */
+.services-page {
+    background: var(--services-bg);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.services-container {
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+/* HEADER */
+.services-header h1 {
+    font-size: 32px;
+    color: var(--heading-green);
+    margin-bottom: 8px;
+}
+
+.services-header p {
+    color: var(--text-soft);
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* SERVICE CARD */
+.service-card {
+    background: var(--card-bg);
+    color: var(--text-main);
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* TOP SECTION */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ICON BOXES */
+.icon-box {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icon-box.blue {
+    background: var(--icon-blue-bg);
+}
+
+.icon-box.green {
+    background: var(--icon-green-bg);
+}
+
+.icon-box.gold {
+    background: var(--icon-gold-bg);
+}
+
+/* STATUS TAGS */
+.status-tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.status-tag.verified,
+.status-tag.available,
+.status-tag.apply {
+    color: var(--status-text);
+    background: var(--status-bg);
+    border: 1px solid var(--status-border);
+}
+
+/* Explore Button */
+.explore-link {
+    border: none;
+    color: aliceblue;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+}
+
+.explore-link:hover {
+    background: black;
+}
+
+/* SECONDARY SECTION */
+.secondary-services {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+}
+
+/* Buttons */
+.btn-secondary {
+   background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+    color: aliceblue;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: black;
+}
+
+/* Cards */
+.analytics-card,
+.marketplace-card {
+    background: var(--card-bg);
+    color: var(--text-main);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+}
+
+/* PROGRESS BAR */
+.progress-track {
+    height: 8px;
+    background: var(--progress-track);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--progress-fill);
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .services-grid,
+    .secondary-services {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .services-container {
+        padding: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .secondary-services {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .services-header h1 {
+        font-size: 28px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .analytics-card,
+    .marketplace-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .services-header h1 {
+        font-size: 26px;
+    }
+
+    .services-header p {
+        font-size: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 14px;
+    }
+
+    .card-top {
+        margin-bottom: 14px;
+    }
+
+    .icon-box {
+        font-size: 22px;
+        padding: 8px;
+    }
+
+    .analytics-card,
+    .marketplace-card {
+        padding: 20px;
+    }
+
+    .secondary-services {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .services-header h1 {
+        font-size: 22px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .explore-link {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .analytics-card,
+    .marketplace-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .services-header h1 {
+        font-size: 20px;
+    }
+
+    .service-card {
+        padding: 10px;
+    }
+
+    .icon-box {
+        font-size: 18px;
+        padding: 6px;
+    }
+}

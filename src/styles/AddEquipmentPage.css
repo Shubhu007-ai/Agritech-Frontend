@@ -1,0 +1,224 @@
+/* ======================================================
+   MAIN WRAPPER + CARD
+====================================================== */
+
+.add-equipment-wrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: var(--equip-wrapper-bg);
+}
+
+.add-equipment-card {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  width: 100%;
+  max-width: 700px;
+  padding: 32px;
+  border: 1px solid var(--equip-card-border);
+  box-shadow: var(--equip-card-shadow);
+  animation: fadeIn 0.6s ease;
+  max-height: fit-content;
+  border-radius: 15px;
+  margin: 90px auto;
+}
+
+/* Title + Subtitle */
+.add-equipment-title {
+  text-align: center;
+  color: var(--equip-title);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.add-equipment-sub {
+  text-align: center;
+  color: var(--equip-subtitle);
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+/* ======================================================
+   FORM BLOCK
+====================================================== */
+
+.equipment-form-container {
+  background: var(--equip-form-bg);
+  box-shadow: var(--equip-form-shadow);
+  padding: 22px;
+  border-radius: 14px;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+}
+
+.equipment-form-container h3 {
+  color: var(--equip-form-text);
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+
+/* ======================================================
+   FORM GRID
+====================================================== */
+
+.equipment-form {
+  display: grid;
+  gap: 1.3em;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* ======================================================
+   INPUT FIELDS
+====================================================== */
+
+.form-input,
+.equipment-type {
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--equip-input-border);
+  background: var(--equip-input-bg);
+  font-size: 15px;
+  color: var(--equip-input-text);
+  transition: all 0.25s ease;
+}
+
+.form-input:focus,
+.equipment-type:focus {
+  border-color: var(--equip-input-focus);
+  background: var(--equip-input-focus-bg);
+  box-shadow: 0 0 8px var(--equip-input-focus);
+  transform: scale(1.02);
+}
+
+/* Full width rows */
+.full-width {
+  grid-column: span 2;
+}
+
+/* ======================================================
+   SUBMIT BUTTON
+====================================================== */
+
+.add-equip-btn {
+  grid-column: span 2;
+  padding: 14px;
+  background: var(--equip-btn-bg);
+  color: var(--equip-btn-text);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.add-equip-btn:hover {
+  background: var(--equip-btn-hover-bg);
+  color: var(--equip-btn-hover-text);
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   SUCCESS POPUP ANIMATION
+====================================================== */
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: var(--equip-sucess-bg);
+  padding: 20px 30px;
+  color: var(--equip-sucess-text);
+  font-size: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px var(--equip-sucess-shadow);
+  opacity: 0;
+  pointer-events: none;
+  animation: popupShow 0.6s ease forwards;
+}
+
+@keyframes popupShow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* ======================================================
+   RESPONSIVE DESIGN
+====================================================== */
+
+@media (max-width: 900px) {
+  .add-equipment-wrapper {
+    margin-top: 0px;
+  }
+
+  .equipment-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-equipment-card {
+    padding: 24px;
+  }
+
+  .add-equipment-wrapper {
+    margin-top: 0px;
+  }
+
+  .equipment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-equip-btn {
+    grid-column: 1;
+  }
+
+  .full-width {
+    grid-column: 1;
+  }
+
+  .add-equipment-title {
+    font-size: xx-large;
+  }
+}
+
+@media (max-width: 420px) {
+  .add-equipment-wrapper {
+    margin-top: 80px;
+  }
+
+  .add-equipment-card {
+    padding: 18px;
+    margin: 0 auto;
+  }
+
+  .add-equipment-title {
+    font-size: var(--equip-title-small);
+  }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

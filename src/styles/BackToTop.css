@@ -1,0 +1,40 @@
+.tap-to-top {
+  position: fixed;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #bcc1cc;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  
+  border-radius: 50%;
+
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.3s ease;
+
+  /* Completely prevent ANY text from appearing */
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-shadow: none !important;
+}
+
+/* SVG icon must stay visible */
+.tap-to-top svg {
+  pointer-events: none;
+}
+
+/* Hover effect */
+.tap-to-top:hover {
+  background: rgb(128, 128, 128);
+  transform: translateX(-50%) scale(1.10);
+}

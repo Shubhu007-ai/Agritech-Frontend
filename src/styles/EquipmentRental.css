@@ -1,0 +1,278 @@
+/* ===============================
+   PAGE CONTAINER
+================================ */
+.rental-page-container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--rental-bg);
+  min-height: 100vh;
+}
+
+/* ===============================
+   MODE SWITCHER
+================================ */
+.switch-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  margin: 90px auto 25px auto;
+}
+
+.switch-tabs {
+  display: flex;
+  position: relative;
+  background: var(--rental-switch-bg);
+  border: 1px solid var(--rental-switch-border);
+  padding: 6px;
+  border-radius: 14px;
+  gap: 4px;
+}
+
+.switch-tab {
+  padding: 10px 28px;
+  font-size: 1rem;
+    color: var(--rental-switch-text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.switch-tab.active {
+   color: var(--rental-switch-active-text);
+  font-weight: 700;
+}
+
+.switch-slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  height: calc(100% - 6px);
+   background: var(--rental-switch-slider);
+  border-radius: 10px;
+  transition: 0.35s ease;
+  z-index: 1;
+}
+
+.switch-slider.lessee {
+  transform: translateX(0);
+}
+
+.switch-slider.rentee {
+  transform: translateX(100%);
+}
+
+/* ===============================
+   HEADER
+================================ */
+.rental-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rental-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--rental-header-text);
+  margin-bottom: 6px;
+}
+
+.rental-header p {
+  color: var(--rental-header-text);
+  font-size: 1rem;
+}
+
+/* ===============================
+   ADD EQUIPMENT LINK
+================================ */
+.add-rental-link {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--rental-add-btn-border);
+  color: var(--rental-add-btn-text);
+  transition: 0.25s ease;
+}
+
+.add-rental-link:hover {
+  border: 1px solid var(--rental-add-btn-border);
+  color: var(--rental-add-btn-text);
+}
+
+/* ===============================
+   EQUIPMENT GRID
+================================ */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 35px;
+  padding-bottom: 40px;
+}
+
+/* ===============================
+   CARD DESIGN
+================================ */
+.equipment-card {
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--rental-card-bg);
+  border: 1px solid var(--rental-card-border);
+  box-shadow: var(--rental-card-shadow);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--rental-card-hover-shadow);
+}
+
+.equipment-image {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===============================
+   CARD CONTENT
+================================ */
+.card-content {
+  margin-top: 14px;
+}
+
+.equipment-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--rental-card-title);
+  margin-bottom: 8px;
+}
+
+.equip-loc-text {
+    color: var(--rental-card-title);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--rental-card-price);
+}
+
+.book-btn {
+  background: linear-gradient(135deg, var(--view-video-btn-start), var(--view-video-btn-end));
+  border: none;
+  padding: 10px 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--rental-book-btn-text);
+}
+
+.book-btn:hover {
+  background: var(--rental-book-btn-hover-bg);
+  color: var(--rental-book-btn-hover-text);
+}
+
+/* ===============================
+   RESPONSIVE FIXES
+================================ */
+@media (max-width: 1200px) {
+  .book-btn {
+    padding: 10px 8px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .switch-container {
+    margin-top: 80px;
+  }
+
+  .rental-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .switch-container {
+    margin-top: 80px;
+  }
+
+  .rental-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 590px) {
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .switch-container {
+    margin-top: 80px;
+  }
+
+  .switch-tabs {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .switch-tab {
+    flex: 1;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .switch-tabs {
+    padding: 5px;
+  }
+
+  .switch-tab {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .rental-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .equipment-image {
+    height: 180px;
+  }
+}

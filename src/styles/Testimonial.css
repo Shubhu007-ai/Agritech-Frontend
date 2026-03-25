@@ -1,0 +1,112 @@
+/* SECTION */
+.testimonial-section {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  box-sizing: border-box;
+}
+
+/* CARD */
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 20px;
+  padding: 25px;
+
+  background: var(--testimonial-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+
+  border-left: 4px solid var(--testimonial-border);
+
+  box-shadow: 0 4px 14px var(--testimonial-card-shadow);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeSlideUp 0.7s forwards;
+}
+
+/* Animation delays */
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.25s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.4s; }
+.testimonial-card:nth-child(4) { animation-delay: 0.55s; }
+
+/* Fade + slide animation */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px var(--testimonial-hover-shadow);
+}
+
+/* Alternating layout */
+.testimonial-card.left { flex-direction: row; }
+.testimonial-card.right { flex-direction: row-reverse; }
+
+/* IMAGE */
+.testimonial-image img {
+  width: 180px;
+  height: 30vh;
+  border-radius: 14px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.testimonial-card:hover .testimonial-image img {
+  transform: scale(1.05);
+}
+
+/* TEXT AREA */
+.testimonial-details {
+  flex: 1;
+}
+
+.testimonial-details h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--testimonial-heading);
+}
+
+.location {
+  font-size: 14px;
+  color: var(--testimonial-location);
+  margin-bottom: 12px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--testimonial-text);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .testimonial-card,
+  .testimonial-card.left,
+  .testimonial-card.right {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+}

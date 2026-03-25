@@ -1,0 +1,236 @@
+/* ===========================
+   COMMENT BOX WRAPPER
+   =========================== */
+.comment-box {
+  background: var(--comment-card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px var(--comment-card-shadow);
+  margin-top: 60px;
+  border: 1px solid var(--comment-card-border);
+}
+
+.comment-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--comment-title);
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   INPUT
+   =========================== */
+.comment-input-wrapper {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.comment-input-wrapper input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--comment-input-border);
+  background: var(--comment-input-bg);
+  transition: 0.2s;
+  color: var(--comment-text-main);
+}
+
+.comment-input-wrapper input:focus {
+  outline: none;
+  border-color: var(--comment-accent);
+  background: var(--comment-input-focus-bg);
+}
+
+.comment-input-wrapper button {
+  background: var(--comment-accent);
+  color: var(--comment-btn-text);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.comment-input-wrapper button:hover {
+  background: var(--comment-accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Disabled + sending animation */
+.comment-input-wrapper button:disabled {
+  background: var(--comment-btn-disabled);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.comment-input-wrapper button.sending::after {
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: var(--comment-btn-shimmer);
+  transform: skewX(-20deg);
+  animation: shimmer 0.8s linear infinite;
+}
+
+/* ===========================
+   COMMENT CARD
+   =========================== */
+.comment-card {
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 16px;
+  background: var(--comment-item-bg);
+  border: 1px solid var(--comment-item-border);
+  margin-bottom: 18px;
+  animation: fadeIn 0.4s ease;
+  transition: 0.3s;
+}
+
+.comment-card:hover {
+  background: var(--comment-item-hover);
+}
+
+.comment-card.pinned {
+  border-left: 4px solid var(--comment-accent);
+}
+
+/* ===========================
+   AVATAR
+   =========================== */
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: var(--comment-avatar-bg);
+  color: var(--comment-avatar-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* ===========================
+   BODY
+   =========================== */
+.comment-body {
+  flex: 1;
+}
+
+.comment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-name {
+  font-weight: 600;
+  color: var(--comment-text-main);
+}
+
+.name-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author-badge {
+  background: var(--comment-accent);
+  color: white;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.pinned-badge {
+  background: var(--comment-pin-bg);
+  color: var(--comment-pin-text);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: var(--comment-time);
+}
+
+.comment-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--comment-text-body);
+}
+
+/* ===========================
+   ACTIONS
+   =========================== */
+.comment-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.like-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--comment-action);
+  transition: 0.2s;
+}
+
+.like-btn.liked {
+  color: var(--comment-liked);
+}
+
+.like-btn:hover {
+  transform: scale(1.1);
+}
+
+.delete-btn,
+.pin-btn {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  color: var(--comment-action);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  color: var(--comment-delete);
+}
+
+.pin-btn:hover {
+  color: var(--comment-accent);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--comment-divider);
+  margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    left: 140%;
+  }
+}

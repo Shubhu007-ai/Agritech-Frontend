@@ -1,0 +1,38 @@
+:root {
+  --primary: #2b7a0b;
+  --secondary: #6bbf59;
+  --text: #222;
+  --light: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--light);
+}
+
+nav {
+    background: var(--primary);
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  background: var(--card-bg);
+}
+
+nav {
+  background: var(--nav-bg);
+}

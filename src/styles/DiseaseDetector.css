@@ -1,0 +1,266 @@
+/* =========================================
+   MAIN PAGE
+========================================= */
+.tool-page {
+    background: var(--tool-bg);
+    min-height: 100vh;
+    padding-top: 70px;
+    font-family: 'Inter', sans-serif;
+}
+
+.tool-container {
+    max-width: 850px;
+    width: 94%;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.detector-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 0.2em;
+    color: var(--heading-green);
+}
+
+.detector-desc {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: var(--text-soft);
+}
+
+/* =========================================
+   UPLOAD BOX
+========================================= */
+.upload-box {
+    background: linear-gradient(135deg, var(--upload-gradient-start), var(--upload-gradient-end));
+    padding: clamp(1.8rem, 3vw, 2.6rem);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+/* DROP ZONE */
+.drop-zone {
+    border: 2px dashed var(--drop-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: clamp(1.8rem, 4vw, 3rem);
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: var(--drop-bg);
+    color: var(--drop-text);
+    font-weight: 600;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    min-height: clamp(240px, 40vw, 350px);
+}
+
+.upload-icon {
+    font-size: clamp(38px, 6vw, 55px);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.drop-zone input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.preview-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    border: 1px solid var(--preview-border);
+}
+
+.no-padding {
+    padding: 1em;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.analyze-btn,
+.try-again-btn {
+    background: var(--analyze-btn-bg);
+    margin-top: 1.8em;
+    padding: 13px 30px;
+    border-radius: 25px;
+    color: var(--analyze-btn-text);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.try-again-btn {
+    margin-top: 0;
+}
+
+.analyze-btn:hover,
+.try-again-btn:hover {
+    transform: scale(1.04);
+}
+
+.remove-btn {
+    border-radius: 25px;
+    border: 1px solid var(--remove-btn-border);
+    padding: 12px 22px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 500;
+    background-color: var(--remove-btn-bg);
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin: 0.6em;
+    color: var(--remove-btn-text);
+}
+
+.remove-btn:hover {
+    border-color: var(--heading-green);
+}
+
+/* =========================================
+   RESULT SECTION
+========================================= */
+.disease-result-box {
+    margin-top: 40px;
+    background: var(--result-bg);
+    padding: clamp(22px, 4vw, 38px);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 18px var(--result-glow);
+    border-left: 5px solid var(--result-left);
+}
+
+.fade-in {
+    animation: fadeIn 0.45s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-img {
+    width: clamp(180px, 40vw, 260px);
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.result-title {
+    color: var(--result-title);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-bottom: 12px;
+}
+
+.result-disease-label {
+    opacity: 0.7;
+    color: var(--result-label);
+    margin: 0;
+    font-size: 1rem;
+    color: var(--heading-green);
+    font-weight: 900;
+}
+
+.result-disease {
+    color: var(--result-disease);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.result-confidence {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--result-confidence);
+    margin-top: 5px;
+}
+
+/* Confidence Bar */
+.confidence-bar {
+    width: 85%;
+    max-width: 420px;
+    height: 10px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 5px;
+    margin: 15px auto 20px auto;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: var(--heading-green);
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .tool-container {
+        width: 92%;
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 768px) {
+    .upload-box {
+        padding: 1.6rem;
+    }
+
+    .drop-zone {
+        padding: 1.6rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .tool-container {
+        width: 95%;
+    }
+
+    .result-img {
+        width: 180px;
+    }
+
+    .try-again-btn,
+    .analyze-btn,
+    .remove-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .detector-title {
+        font-size: 1.5rem;
+    }
+
+    .result-img {
+        width: 160px;
+    }
+}

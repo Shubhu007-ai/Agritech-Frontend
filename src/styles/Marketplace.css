@@ -1,0 +1,92 @@
+.market-container {
+  padding: 6em;
+  background-color: var(--market-bg);
+  min-height: 100vh;
+  color: var(--market-text);
+      padding: 110px 30px 30px 30px;
+}
+
+.market-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.market-header h1 {
+  color: var(--market-heading);
+  font-size: 2.5rem;
+}
+
+.toggle-sell-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: var(--toggle-btn-bg);
+  color: var(--toggle-btn-text);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.crop-card {
+  background: var(--crop-card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+  border: 1px solid var(--crop-card-border);
+}
+
+.crop-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--crop-card-hover);
+}
+
+.crop-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.crop-details {
+  padding: 15px;
+}
+
+.crop-tag {
+  background: var(--crop-tag-bg);
+  color: var(--crop-tag-text);
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+.crop-price {
+  font-size: 14px;
+  color: var(--crop-price);
+}
+
+.buy-btn {
+  background: var(--buy-btn-bg);
+  color: var(--buy-btn-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}

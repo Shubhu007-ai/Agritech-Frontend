@@ -1,0 +1,601 @@
+/* overview */
+:root {
+  --bg-main: #fbfdfc;
+  --text-main: #111;
+  --text-muted: #555;
+  --text-soft: #666;
+  --text-light: #444;
+
+  --badge-bg: #e8f5e9;
+  --badge-text: #2e7d32;
+
+  --btn-primary-start: #4caf50;
+  --btn-primary-end: #2e7d32;
+  --btn-secondary-bg: aliceblue;
+  --btn-secondary-border: #ddd;
+
+  --card-bg: aliceblue;
+  --card-border: #eee;
+  --icon-bg: #f0f9f4;
+
+  --stats-bg: aliceblue;
+  --stats-border: #f0f0f0;
+  --stats-divider: #f9f9f9;
+
+  --loc-tag-bg: #f5f5f5;
+
+  --next-bg: antiquewhite;
+
+  --shadow-soft: rgba(0, 0, 0, 0.04);
+
+
+/* dashboard */
+  --dash-bg: #f5f7f8;
+  --card-bg: aliceblue;
+  --card-border: #e0eee0;
+  --card-shadow: rgba(0, 0, 0, 0.12);
+
+  --text-main: #000000;
+  --text-muted: #333;
+  --text-soft: #555;
+  --text-light: #666;
+  
+  --heading-green: #2e7d32;
+
+  --live-bg: #e6f4ea;
+  --live-text: #2e7d32;
+
+  --primary-start: #4caf50;
+  --primary-end: #2e7d32;
+
+  --alert-bg: #ffeed7;
+  --alert-border: orange;
+
+  --market-card-bg: antiquewhite;
+  --crop-name: #dc5631;
+
+/* agriservices */
+  --services-bg: #f8faf9;
+
+  --heading-green: #2e7d32;
+  --text-main: black;
+  --text-soft: #666;
+
+  --card-bg: aliceblue;
+  --card-border: #eef2f0;
+
+  --icon-blue-bg: #eef6ff;
+  --icon-green-bg: #f0f9f4;
+  --icon-gold-bg: #fff9ee;
+
+  --status-text: #27ae60;
+  --status-bg: #eaf7ee;
+  --status-border: #27ae60;
+
+  --primary-start: #4caf50;
+  --primary-end: #2e7d32;
+
+  --progress-track: #eee;
+  --progress-fill: #27ae60;
+
+/* diseasedetector */
+  --tool-bg: #fbfdfc;
+
+  --heading-green: #2e7d32;
+  --text-main: black;
+  --text-soft: #555;
+
+  --upload-gradient-start: #4caf50;
+  --upload-gradient-end: #2e7d32;
+
+  --drop-border: #27ae60;
+  --drop-bg: aliceblue;
+  --drop-text: black;
+
+  --preview-border: #eee;
+
+  --analyze-btn-bg: #ffc107;
+  --analyze-btn-text: black;
+
+  --remove-btn-bg: #1a1a1a;
+  --remove-btn-border: black;
+  --remove-btn-text: white;
+
+  --result-bg: #000;
+  --result-glow: rgba(0, 255, 100, 0.3);
+
+  --result-title: #00ff88;
+  --result-label: rgba(255,255,255,0.7);
+
+  --result-disease: #ff6b6b;
+  --result-confidence: #00eaff;
+
+  --error-text: red;
+
+
+/* equipmentrental */
+  --rental-bg: #f5f7f8;
+
+  --heading-green: #2e7d32;
+  --text-main: black;
+  --text-soft: #666;
+
+  --equipment-gradient-start: rgb(46, 125, 50);
+  --equipment-gradient-end: rgb(27, 94, 32);
+
+  --equipment-text: aliceblue;
+  --neutral-text: black;
+
+  --preview-border: #eee;
+
+  --book-btn-bg: #ffc107;
+  --book-btn-text: black;
+
+  --disabled-bg: #ccc;
+  --disabled-text: white;
+
+  --equipment-card-shadow: rgba(0, 0, 0, 0.1);
+  --equipment-hover-shadow: rgba(0, 0, 0, 0.15);
+
+  --black: black;
+  --white: white;
+
+
+/* finance */
+  --finance-bg: #f0f2f5;
+
+  --heading-green: #1b5e20;
+  --text-main: #333;
+  --text-soft: #666;
+  --text-light: #777;
+
+  --eligibility-gradient-start: #2e7d32;
+  --eligibility-gradient-end: #1b5e20;
+
+  --eligibility-text: #e8f5e9;
+  --eligibility-circle: rgba(255, 255, 255, 0.1);
+
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --input-text: #333;
+
+  --check-btn-bg: #ffc107;
+  --check-btn-text: #333;
+
+  --loan-result-bg: rgba(255, 255, 255, 0.15);
+  --loan-h2: #fff;
+
+  --schemes-bg: white;
+  --scheme-border-left: #2e7d32;
+
+  --scheme-type-bg: #e8f5e9;
+  --scheme-type-text: #1b5e20;
+
+  --scheme-desc: #555;
+
+  --scheme-interest-bg: #ffebee;
+  --scheme-interest-text: #d32f2f;
+
+  --view-btn-border: #2e7d32;
+  --view-btn-text: #2e7d32;
+
+  --white: white;
+
+/* insurance */
+  --insurance-bg: #f5f7f8;
+
+  --heading-green: #2e7d32;
+  --text-main: black;
+  --text-soft: #555;
+
+  --card-gradient-start: #2e7d32;
+  --card-gradient-end: #1b5e20;
+
+  --card-text: aliceblue;
+  --card-border-light: #e8f5e9;
+
+  --input-bg: #fafafa;
+  --input-border: #ddd;
+  --input-text: black;
+
+  --calc-btn-bg: #ffc107;
+  --calc-btn-text: #333;
+
+  --result-bg: #e8f5e9;
+  --result-left: #2e7d32;
+  --result-title: #1b5e20;
+
+  --section-title-bg-start: #2e7d32;
+  --section-title-bg-end: #1b5e20;
+  --section-title-text: aliceblue;
+
+  --plan-bg: white;
+  --plan-border-left: #2e7d32;
+  --plan-header-text: #1b5e20;
+
+  --provider-text: #777;
+
+  --badge-gov-bg: #fff3e0;
+  --badge-gov-text: #ef6c00;
+
+  --badge-private-bg: #e3f2fd;
+  --badge-private-text: #1565c0;
+
+  --badge-premium-bg: #f3e5f5;
+  --badge-premium-text: #8e24aa;
+
+  --plan-desc-text: #555;
+
+  --coverage-text: #333;
+  --coverage-strong: #2e7d32;
+
+  --apply-btn-bg: #e8f5e9;
+  --apply-btn-text: #2e7d32;
+  --apply-btn-hover: #c8e6c9;
+
+/* marketplace */
+  --market-bg: #fdfbf7;
+
+  --market-heading: #2e7d32;
+  --market-text: black;
+
+  --toggle-btn-bg: #2e7d32;
+  --toggle-btn-text: white;
+
+  --crop-card-bg: white;
+  --crop-card-border: #eee;
+  --crop-card-hover: #81c784;
+
+  --crop-tag-bg: #e8f5e9;
+  --crop-tag-text: #2e7d32;
+
+  --crop-price: #000000;
+
+  --buy-btn-bg: #2e7d32;
+  --buy-btn-text: white;
+
+/* learnhub */
+  --learn-bg: #f3f6f4;
+
+  --learn-heading: #2f6f3e;
+  --learn-text-main: #1f2937;
+  --learn-text-soft: #6b7280;
+
+  --filter-bg: white;
+  --filter-border: #e5e7eb;
+
+  --video-card-bg: aliceblue;
+  --video-card-shadow: rgba(0, 0, 0, 0.05);
+  --video-card-hover-shadow: rgba(47, 111, 62, 0.25);
+
+  --upload-btn-start: #4caf50;
+  --upload-btn-end: #2e7d32;
+
+  --view-video-btn-start: #4caf50;
+  --view-video-btn-end: #2e7d32;
+
+  --like-color: #e11d48;
+
+  --upload-form-bg: white;
+  --upload-form-border: #e5e7eb;
+  --upload-form-field-bg: #f9fafb;
+
+  --section-bg: white;
+  --card-border: #eee;
+
+/* testimonial */
+  --testimonial-bg: aliceblue;
+  --testimonial-card-shadow: rgba(0,0,0,0.08);
+  --testimonial-hover-shadow: rgba(0,0,0,0.15);
+
+  --testimonial-heading: #1a1a1a;
+  --testimonial-location: #777;
+  --testimonial-text: #2b2b2b;
+
+  --testimonial-border: transparent;
+
+ /* ========= Soil Report (LIGHT) ========= */
+  --sr-bg: #f5f7f8;
+  --sr-text-main: #111111;
+  --sr-text-soft: #555555;
+  
+  --sr-card-bg: #ffffff;
+  --sr-card-border: #eeeeee;
+  --sr-card-shadow: rgba(0, 0, 0, 0.08);
+  
+  --sr-form-grad-start: #2e7d32;
+  --sr-form-grad-end: #1b5e20;
+  --sr-form-text: #ffffff;
+  
+  --sr-input-bg: #f9fafb;
+  --sr-input-border: #dddddd;
+  --sr-input-text: #111111;
+  
+  --sr-btn-bg: #ffc107;
+  --sr-btn-text: #111111;
+  --sr-btn-hover: #ffca28;
+
+  --sr-optimal-text: #2e7d32;
+  --sr-optimal-bg: #e8f5e9;
+  --sr-low-text: #d32f2f;
+  --sr-low-bg: #ffebee;
+  --sr-warning-text: #ed6c02;
+  --sr-warning-bg: #fff3e0;
+
+  --sr-gauge-bg: #f9fafb;
+  --sr-gauge-ring-fill: #2e7d32;
+  --sr-gauge-ring-empty: #eeeeee;
+
+
+/* =====uploadvideo =======*/
+  --upload-bg: #f4f6f5;
+  --upload-text: #1f2937;
+  --upload-muted: #6b7280;
+
+  --upload-heading: #2f6f3e;
+
+  --upload-card-bg: #ffffff;
+  --upload-card-border: #e5e7eb;
+  --upload-shadow: rgba(0, 0, 0, 0.06);
+
+  /* Inputs */
+  --upload-input-bg: #f9fafb;
+  --upload-input-focus-bg: #ffffff;
+  --upload-input-border: #e5e7eb;
+  
+  /* Primary Action (Green) */
+  --upload-primary: #2f6f3e;
+  --upload-primary-hover: #245c31;
+
+  /* Drag & Drop Area */
+  --upload-drop-bg: #f9fafb;
+  --upload-drop-hover: #eef6f0;
+
+  /* Progress */
+  --upload-progress-bg: #e5e7eb;
+
+  /* Danger (Remove Button) */
+  --upload-danger: #ef4444;
+  --upload-danger-hover: #dc2626;
+
+  /* Error Box */
+  --upload-error-bg: #fdecea;
+  --upload-error-text: #842029;
+  --upload-error-border: #f5c2c7;
+
+  /* Success Box */
+  --upload-success-bg: #e6f6ec;
+  --upload-success-text: #2f6f3e;
+  --upload-success-border: #b7e4c7;
+
+/* viewdetail */
+  --view-bg: #f3f6f4;
+  --view-text-main: #1f2937;
+  --view-text-soft: #6b7280;
+  --view-title: #2f6f3e;
+
+  --view-card-bg: #ffffff;
+  --view-card-border: #e5e7eb;
+  --view-card-shadow: rgba(0,0,0,0.06);
+
+  --view-video-shadow: rgba(0,0,0,0.08);
+  --view-video-hover-shadow: rgba(47,111,62,0.25);
+
+  --view-related-bg: #f9fafb;
+  --view-related-hover: #eef6f0;
+  --view-related-shadow: rgba(47,111,62,0.18);
+
+  --view-thumb-border: #e5e7eb;
+
+  --view-badge-bg: black;
+  --view-badge-text: white;
+
+  --view-accent: #2f6f3e;
+
+  --view-avatar-bg: linear-gradient(135deg,#2f6f3e,#3e8e52);
+  --view-avatar-text: white;
+  --view-avatar-shadow: rgba(47,111,62,0.3);
+
+/* commentsection */
+  --comment-card-bg: #ffffff;
+  --comment-card-border: #e5e7eb;
+  --comment-card-shadow: rgba(0, 0, 0, 0.05);
+  --comment-title: #2f6f3e;
+
+  --comment-input-bg: #f9fafb;
+  --comment-input-focus-bg: #ffffff;
+  --comment-input-border: #e5e7eb;
+  --comment-text-main: #1f2937;
+  --comment-text-body: #374151;
+  --comment-time: #9ca3af;
+
+  --comment-accent: #2f6f3e;
+  --comment-accent-hover: #256c38;
+  --comment-btn-text: white;
+  --comment-btn-disabled: #9ca3af;
+  --comment-btn-shimmer: rgba(255, 255, 255, 0.3);
+
+  --comment-item-bg: #f9fafb;
+  --comment-item-hover: #eef6f0;
+  --comment-item-border: #e5e7eb;
+
+  --comment-avatar-bg: #2f6f3e;
+  --comment-avatar-text: white;
+
+  --comment-pin-bg: #facc15;
+  --comment-pin-text: #000;
+  --comment-action: #6b7280;
+  --comment-liked: #e11d48;
+  --comment-delete: #ef4444;
+
+  --comment-divider: #e5e7eb;
+
+/* footer */
+  --footer-bg: #0d3924;
+  --footer-pattern: rgba(255, 255, 255, 0.08);
+
+  --footer-text: #dceee4;
+  --footer-title: #f1c453;
+  --footer-logo: #f1c453;
+  --footer-logo-highlight: #ffffff;
+
+  --footer-highlight: #f1c453;
+  --footer-border: #dceee4;
+  --footer-hover-bg: #dceee42a;
+
+  --footer-bottom-bg: #e2a742;
+  --footer-bottom-text: #21321e;
+
+/* popupchatbot */
+  --chat-bg: #ffffff;
+  --chat-text: #1a1a1a;
+
+  --chat-header-bg: linear-gradient(135deg, #4caf50, #2e7d32);
+  --chat-header-text: #ffffff;
+  --chat-header-border: rgba(255,255,255,0.1);
+
+  --chat-btn-bg: #ffffff;
+  --chat-btn-icon: #2e7d32;
+  --chat-btn-shadow: rgba(0,0,0,0.25);
+
+  --chat-window-shadow: rgba(0,0,0,0.25);
+
+  --chat-user-msg-bg: linear-gradient(135deg, #a6d4a7, #61bd66);
+  --chat-user-msg-text: #1a1a1a;
+
+  --chat-bot-msg-bg: linear-gradient(135deg, #4caf50, #2e7d32);
+  --chat-bot-msg-text: #ffffff;
+
+  --chat-input-bg: #f1f3f4;
+  --chat-input-text: #1a1a1a;
+  --chat-divider: #e5e7eb;
+
+  --chat-dropdown-bg: #f2f3f5;
+  --chat-dropdown-text: #1a1a1a;
+  --chat-dropdown-hover: #e9ecef;
+
+  --chat-accent: #7dbc80;
+
+  --chat-voice-btn-bg: #e8f9e9;
+  --chat-voice-btn-icon: #2e7d32;
+  --chat-voice-active: #ff3b30;
+
+  --chat-sidebar-bg: linear-gradient(135deg, #4caf50, #2e7d32);
+  --chat-sidebar-text: #ffffff;
+  --chat-sidebar-item-hover-bg: aliceblue;
+  --chat-sidebar-item-hover-text: #000000;
+
+/*auth(login/register) */
+
+  --auth-bg: #f3f7f3;
+  --auth-card-bg: #ffffff;
+  --auth-card-shadow: rgba(0, 0, 0, 0.1);
+
+  --auth-title: #2b7a0b;
+
+  --auth-text-main: #1a1a1a;
+
+  --auth-input-bg: lavender;
+  --auth-input-text: #000000;
+  --auth-input-border: #cccccc;
+  --auth-input-focus-border: #2b7a0b;
+  --auth-input-focus-bg: #f6fff6;
+
+  --auth-eye-icon: #2b7a0b;
+
+  --auth-btn-bg: #2b7a0b;
+  --auth-btn-text: #ffffff;
+  --auth-btn-hover: #256707;
+
+  --auth-link: #000000;
+  --auth-link-accent: #2b7a0b;
+
+  /* equipment-rental */
+   --equip-wrapper-bg: #f5f7f8;
+  --equip-card-bg: #ffffff;
+  --equip-card-border: #dfeee2;
+  --equip-card-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+  --equip-form-bg: linear-gradient(135deg,#4caf50,#2e7d32);
+  --equip-form-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  --equip-form-text: #ffffff;
+
+  --equip-input-bg: #f2f2f2;
+  --equip-input-text: #000;
+  --equip-input-border: #bfbfbf;
+  --equip-input-focus: #4caf50;
+  --equip-input-focus-bg: #ffffff;
+  --equip-input-focus-ring: rgba(76,175,80,0.35);
+
+  --equip-title: aliceblue;
+  --equip-subtitle: #333;
+
+  --equip-btn-bg: #ffc107;
+  --equip-btn-text: #333;
+  --equip-btn-hover-bg: #000;
+  --equip-btn-hover-text: white;
+
+  --equip-success-bg: #2ecc71;
+  --equip-success-text: white;
+  --equip-success-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+    --rental-bg: #f5f7f8;
+
+  --rental-switch-bg: #ffffff;
+  --rental-switch-border: #cfe9d7;
+  --rental-switch-text: #555;
+  --rental-switch-active-text: #000;
+  --rental-switch-slider: #4caf50;
+
+  --rental-header-text: #1a1a1a;
+  --rental-header-subtext: #555;
+
+  --rental-add-btn-border: #4caf50;
+  --rental-add-btn-text: #4caf50;
+  --rental-add-btn-hover-bg: #4caf50;
+  --rental-add-btn-hover-text: white;
+
+  /* Cards */
+  --rental-card-bg: #ffffff;
+  --rental-card-border: #dceee4;
+  --rental-card-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  --rental-card-hover-shadow: 0 12px 30px rgba(0,0,0,0.18);
+
+  --rental-card-title: #2e7d32;
+  --rental-card-subtext: #666;
+  --rental-card-price: #2e7d32;
+
+  --rental-book-btn-bg: #4caf50;
+  --rental-book-btn-text: white;
+  --rental-book-btn-hover-bg: #2e7d32;
+  --rental-book-btn-hover-text: white;
+
+/* ========= Farming Insights (LIGHT) ========= */
+  --fi-bg: #f5f7f8;
+  --fi-text-main: black;
+  --fi-text-soft: #555;
+  
+  --fi-tab-bg: aliceblue;
+  --fi-tab-text: #555;
+  --fi-tab-active-bg: #2e7d32;
+  --fi-tab-active-text: #ffffff;
+
+  --fi-card-grad-start: #2e7d32;
+  --fi-card-grad-end: #1b5e20;
+  --fi-card-text: aliceblue;
+  --fi-input-bg: #fafafa;
+  --fi-input-border: #ddd;
+  --fi-input-text: black;
+  
+  --fi-btn-bg: #ffc107;
+  --fi-btn-text: black;
+  --fi-btn-hover: #ffca28;
+
+  --fi-right-header-bg: #2e7d32;
+  --fi-right-header-text: aliceblue;
+  --fi-result-card-bg: white;
+  --fi-result-card-border: #2e7d32;
+  --fi-result-title: #1b5e20;
+  --fi-result-header-text: #333;
+  --fi-result-header-bg: aliceblue;
+}
+

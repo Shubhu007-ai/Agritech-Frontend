@@ -1,0 +1,313 @@
+/* FarmingInsights.css */
+
+.fi-page-wrapper {
+    background-color: var(--fi-bg);
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.fi-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Page Title & Tabs */
+.fi-title {
+    color: var(--fi-result-title);
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fi-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.fi-tab-btn {
+    background-color: var(--fi-tab-bg);
+    color: var(--fi-tab-text);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.fi-tab-btn:hover {
+    opacity: 0.8;
+}
+
+.fi-tab-btn.active {
+    background-color: var(--fi-tab-active-bg);
+    color: var(--fi-tab-active-text);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Grid Layout */
+.fi-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .fi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LEFT SIDE: Green Gradient Form Card */
+.fi-form-card {
+    background: linear-gradient(135deg, var(--fi-card-grad-start), var(--fi-card-grad-end));
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.fi-form-title {
+    color: var(--fi-card-text);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Form Inputs inside the Green Card */
+.fi-input-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 500px) {
+    .fi-input-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fi-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fi-input-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--fi-card-text);
+}
+
+.fi-input-group input {
+    padding: 12px 15px;
+    border: 1px solid var(--fi-input-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--fi-input-bg);
+    color: var(--fi-input-text);
+    transition: all 0.3s ease;
+}
+
+.fi-input-group input:focus {
+    outline: none;
+    border-color: #5ad97e;
+    box-shadow: 0 0 0 2px rgba(90, 217, 126, 0.2);
+}
+
+/* Yellow Submit Button */
+.fi-submit-btn {
+    width: 100%;
+    background-color: var(--fi-btn-bg);
+    color: var(--fi-btn-text);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.fi-submit-btn:hover {
+    background-color: var(--fi-btn-hover);
+}
+
+/* RIGHT SIDE: Result Card */
+.fi-result-card {
+    background-color: var(--fi-result-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    height: fit-content;
+}
+
+.fi-result-header {
+    background-color: var(--fi-result-header-bg);
+    color: var(--fi-result-header-text);
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fi-result-content {
+    padding: 30px;
+    border-left: 4px solid var(--fi-result-card-border);
+}
+
+.fi-result-content h4 {
+    color: var(--fi-text-soft);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fi-result-content p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--fi-text-main);
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.fi-result-notes {
+    font-size: 1.2rem !important;
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+}
+
+/* ================= AI LOADING EFFECT ================= */
+
+.fi-submit-btn.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.fi-submit-btn.loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    animation: fi-btn-scan 1.5s infinite;
+}
+
+@keyframes fi-btn-scan {
+    100% {
+        left: 120%;
+    }
+}
+
+/* ================= RESULT CARD AI GLOW ================= */
+
+.fi-result-card {
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.fi-result-card.ai-active {
+    box-shadow:
+        0 0 10px rgba(90,217,126,0.3),
+        0 0 25px rgba(90,217,126,0.2),
+        0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= AI SCANNING LINE ================= */
+
+.fi-result-card.scanning::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10%;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(90,217,126,0.35),
+        transparent
+    );
+    animation: fi-scan 2s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fi-scan {
+    0% {
+        top: -40%;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+/* ================= RESULT FADE IN ================= */
+
+.fi-result-content {
+    animation: fi-fade-up 0.6s ease;
+}
+
+@keyframes fi-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= INPUT FOCUS GLOW ================= */
+
+.fi-input-group input:focus {
+    transform: scale(1.02);
+}
+
+/* ================= RESULT NUMBER ANIMATION ================= */
+
+.fi-result-content p {
+    transition: all 0.3s ease;
+}
+
+.fi-result-card.ai-active .fi-result-content p {
+    transform: scale(1.03);
+}
+
+/* ================= MOBILE SMOOTHNESS ================= */
+
+@media (max-width: 600px) {
+
+    .fi-result-content p {
+        font-size: 1.3rem;
+    }
+
+    .fi-title {
+        font-size: 1.8rem;
+    }
+
+}

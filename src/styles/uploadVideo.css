@@ -1,0 +1,437 @@
+/* ========================================= */
+/* UPLOAD VIDEO PAGE – FINAL UPDATED VERSION */
+/* ========================================= */
+
+/* PAGE */
+.upload-page {
+  min-height: 100vh;
+  background: var(--upload-bg);
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  color: var(--upload-text);
+}
+
+/* CONTAINER */
+.upload-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.upload-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--upload-heading);
+  margin-bottom: 8px;
+}
+
+.upload-container p {
+  color: var(--upload-muted);
+  margin-bottom: 40px;
+}
+
+/* CARD */
+.upload-card-page {
+  background: var(--upload-card-bg);
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--upload-shadow);
+  position: relative;
+}
+
+/* FORM */
+.upload-form-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.upload-form-modern input,
+.upload-form-modern textarea,
+.upload-form-modern select {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--upload-card-border);
+  font-size: 14px;
+  background: var(--upload-input-bg);
+  transition: 0.2s;
+  color: var(--upload-text);
+}
+
+.upload-form-modern input:focus,
+.upload-form-modern textarea:focus,
+.upload-form-modern select:focus {
+  outline: none;
+  border-color: var(--upload-heading);
+  background: var(--upload-input-focus-bg);
+}
+
+/* =================================================== */
+/* PREMIUM DRAG & DROP – New */
+/* =================================================== */
+
+.drag-drop-area {
+  border: 2px dashed var(--upload-primary);
+  border-radius: 18px;
+  padding: 50px;
+  text-align: center;
+  background: var(--upload-drop-bg);
+  transition: 0.3s;
+  position: relative;
+}
+
+.drag-drop-area p {
+  font-size: 15px;
+  color: var(--upload-muted);
+  margin-bottom: 12px;
+}
+
+/* premium glow */
+.drag-drop-area::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  border: 2px dashed var(--upload-primary);
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.drag-drop-area.drag-hover {
+  background: var(--upload-drop-hover);
+  transform: scale(1.01);
+}
+
+.drag-drop-area.drag-hover::before {
+  opacity: 1;
+  box-shadow: 0 0 20px var(--upload-primary);
+}
+
+/* file select button */
+.file-label {
+  background: var(--upload-primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  transition: 0.2s;
+  margin-left: 5px;
+}
+
+.file-label:hover {
+  background: var(--upload-primary-hover);
+}
+
+/* =================================================== */
+/* SKELETON LOADER – New */
+/* =================================================== */
+
+.skeleton-preview {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #ccc, #e8e8e8, #ccc);
+  background-size: 200%;
+  animation: skeleton-shimmer 1.5s infinite linear;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* VIDEO PREVIEW */
+.video-preview {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 8px;
+  background: var(--upload-progress-bg);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--upload-primary);
+  transition: width 0.3s ease;
+}
+
+/* =================================================== */
+/* PREMIUM UPLOAD OVERLAY – New */
+/* =================================================== */
+
+.upload-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+.upload-overlay .overlay-bar {
+  width: 70%;
+  height: 10px;
+  background: var(--upload-progress-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.upload-overlay .overlay-fill {
+  height: 100%;
+  background: var(--upload-primary);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* BUTTONS */
+.upload-video-btn {
+  background: var(--upload-primary);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.upload-video-btn:hover {
+  background: var(--upload-primary-hover);
+}
+
+.upload-video-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ACTION BUTTONS */
+.preview-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.replace-upload-video-btn,
+.remove-upload-video-btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  transition: 0.2s;
+}
+
+/* replace */
+.replace-upload-video-btn {
+  background: var(--upload-primary);
+  color: white;
+}
+
+.replace-upload-video-btn:hover {
+  background: var(--upload-primary-hover);
+}
+
+/* remove */
+.remove-upload-video-btn {
+  background: var(--upload-danger);
+  color: white;
+}
+
+.remove-upload-video-btn:hover {
+  background: var(--upload-danger-hover);
+}
+
+.disabled-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* THUMBNAIL PREVIEW */
+.thumbnail-preview {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.thumbnail-preview img {
+  width: 180px;
+  border-radius: 12px;
+  margin-top: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+}
+
+.thumbnail-preview img:hover {
+  transform: scale(1.04);
+}
+
+/* META INFO */
+.video-meta-info {
+  display: flex;
+  gap: 25px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--upload-text);
+  justify-content: center;
+}
+
+/* ALERTS */
+.upload-error {
+  background: var(--upload-error-bg);
+  border: 1px solid var(--upload-error-border);
+  color: var(--upload-error-text);
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.upload-success {
+  background: var(--upload-success-bg);
+  border: 1px solid var(--upload-success-border);
+  color: var(--upload-success-text);
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  animation: fadeSuccess 0.5s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSuccess {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================= */
+/* RESPONSIVE DESIGN */
+/* ========================================= */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+
+  .upload-page {
+    padding: 95px 20px;
+  }
+
+  .upload-card-page {
+    padding: 35px;
+  }
+
+  .upload-container h1 {
+    font-size: 28px;
+  }
+
+  .video-meta-info {
+    gap: 18px;
+    font-size: 13px;
+  }
+}
+
+/* Small Tablets & Large Phones (768px and below) */
+@media (max-width: 768px) {
+
+  .upload-page {
+    padding: 105px 15px;
+  }
+
+  .upload-card-page {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .upload-container h1 {
+    font-size: 24px;
+  }
+
+  .upload-container p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .drag-drop-area {
+    padding: 35px 20px;
+  }
+
+  .preview-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .replace-upload-video-btn,
+  .remove-upload-video-btn,
+  .upload-video-btn {
+    width: 100%;
+  }
+
+  .video-meta-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+
+  .upload-page {
+    padding: 105px 12px;
+  }
+
+  .upload-card-page {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .upload-container h1 {
+    font-size: 20px;
+  }
+
+  .drag-drop-area {
+    padding: 25px 15px;
+  }
+
+  .thumbnail-preview img {
+    width: 120px;
+  }
+
+  .upload-form-modern input,
+  .upload-form-modern textarea,
+  .upload-form-modern select {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+
+  .upload-card-page {
+    padding: 16px;
+  }
+
+  .file-label {
+    padding: 8px 14px;
+  }
+}

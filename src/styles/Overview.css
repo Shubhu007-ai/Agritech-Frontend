@@ -1,0 +1,274 @@
+/* =========================================
+   1. GLOBAL & WRAPPER STYLES
+   ========================================= */
+.overview-container {
+    background: var(--bg-main);
+    min-height: 70vh;
+    padding-top: 80px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.overview-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 50px 0 50px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* =========================================
+   2. HERO SECTION
+   ========================================= */
+.prototype-badge {
+    color: var(--badge-text);
+    font-weight: 600;
+    font-size: 14px;
+    background: var(--badge-bg);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.hero-section h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-main);
+    margin: 0 0 25px 0;
+    letter-spacing: -1.5px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.btn-open-dash {
+    background: linear-gradient(135deg, var(--btn-primary-start), var(--btn-primary-end));
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-open-dash:hover {
+    background: black;
+    color: aliceblue;
+    transform: translateY(-5px);
+}
+
+.btn-view-schemes {
+    background: var(--btn-secondary-bg);
+    color: #333;
+    border: 1px solid var(--btn-secondary-border);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-size: 16px;
+}
+
+.btn-view-schemes:hover {
+    background: #ddd;
+    color: #333;
+    transform: translateY(-5px);
+    border-color: #ddd;
+}
+
+/* =========================================
+   3. FEATURE CARDS
+   ========================================= */
+.feature-cards-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.feature-mini-card {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    display: flex;
+    gap: 16px;
+    transition: transform 0.2s;
+}
+
+.feature-mini-card:hover {
+    transform: translateY(-5px);
+}
+
+.f-icon {
+    font-size: 24px;
+    background: var(--icon-bg);
+    padding: 10px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.feature-mini-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+.feature-mini-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-soft);
+    line-height: 1.4;
+}
+
+/* =========================================
+   4. QUICK STATS PANEL
+   ========================================= */
+.status-card {
+    background: var(--stats-bg);
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-soft);
+    border: 1px solid var(--stats-border);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-top h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--text-main);
+}
+
+.loc-tag {
+    background: var(--loc-tag-bg);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.stat-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--stats-divider);
+}
+
+.stat-line span {
+    color: var(--text-soft);
+}
+
+.stat-line strong {
+    color: var(--text-main);
+}
+
+.next-box {
+    margin-top: 30px;
+    background: var(--next-bg);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.next-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.next-box p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* =========================================
+   5. MEDIA QUERIES (unchanged)
+   ========================================= */
+@media (min-width: 1200px) {
+    .overview-content {
+        height: 100%;
+        width: auto;
+    }
+
+    .hero-section h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-section h1 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-container {
+        padding-top: 70px;
+    }
+
+    .overview-content {
+        padding: 40px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-cta {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .btn-open-dash,
+    .btn-view-schemes {
+        width: 100%;
+    }
+
+    .feature-cards-row {
+        grid-template-columns: 1fr;
+    }
+
+    .status-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+}

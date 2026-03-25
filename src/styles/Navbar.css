@@ -1,0 +1,157 @@
+/* --- Desktop & Base Styles --- */
+.navbar {
+    background: #333;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #27ab07;
+    font-weight: 600;
+    transition: 0.3s
+}
+
+/* --- Hamburger Icon --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease;
+    border-radius: 2px;
+}
+
+/* --- Menu Containers --- */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+
+.nav-actions-mobile {
+    display: none;
+    /* Hidden on Desktop */
+}
+
+.get-started-btn {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    padding: 8px 18px;
+    border-radius: 25px;
+    color: white !important;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 9rem;
+}
+
+.get-started-btn:hover {
+    background: white;
+    color: #2e7d32 !important;
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+        order: -1;
+        /* Hamburger on left */
+    }
+
+    /* Transform burger to 'X' */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 75%;
+        /* Side menu width */
+        height: 100vh;
+        background: #333;
+        flex-direction: column;
+        gap: 25px;
+        padding: 4em 0 2em 1em;
+        transition: 0.4s ease-in-out;
+        box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+        align-items: flex-start;
+        z-index: 1050;
+        max-height: fit-content;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .nav-menu.open {
+        top: 0;
+    }
+
+    /* FIX: Hide desktop actions to stop double logout button */
+    .nav-actions {
+        display: none !important;
+    }
+
+    /* FIX: Show buttons inside the mobile sidebar */
+    .nav-actions-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        gap: 1em;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .logout-btn {
+        width: 100%;
+        max-width: fit-content;
+    }
+}

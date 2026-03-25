@@ -1,0 +1,49 @@
+.crop-form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 30px auto;
+  max-width: 650px;
+  border: 1px solid #e0e0e0;
+}
+
+.crop-form-container h3 {
+  color: #2e7d32; /* Green for agriculture */
+  text-align: center;
+  margin-top: 0;
+}
+
+.crop-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.crop-input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box; /* Fixes padding issues */
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.sell-btn {
+  grid-column: span 2;
+  background-color: #ff9800; /* Orange for "Selling" action */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sell-btn:hover {
+  background-color: #e65100;
+}

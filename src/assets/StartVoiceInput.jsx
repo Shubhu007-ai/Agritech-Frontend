@@ -1,0 +1,7 @@
+const StartVoiceInput = () => (
+
+<svg  xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 24 24" fill="black">
+    <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 19h2v3h-2v-3z" />
+</svg>
+);
+export default StartVoiceInput;
