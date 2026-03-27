@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import Navbar from "../components/Navbar";
 import "../styles/EquipmentRental.css";
 
@@ -19,7 +19,7 @@ const EquipmentRental = () => {
           ? "/api/equipment/my-equipment"
           : "/api/equipment";
 
-      const res = await axios.get(url);
+      const res = await api.get(url);
       setEquipment(res.data);
     } catch (err) {
       console.log("Fetch Error:", err);
