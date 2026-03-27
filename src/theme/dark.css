@@ -189,28 +189,26 @@
   --apply-btn-hover: #164d29;
 
   /* ========= Marketplace ========= */
-  --market-bg: #0b0f0c;
-
+  --market-bg: #0a0f0d; 
   --market-heading: #e5e7eb;
-  --market-text: #9ca3af;
+  --market-text: #94a3b8; 
 
   --toggle-btn-bg: #22c55e;
   --toggle-btn-text: #ffffff;
 
-  --crop-card-bg: #111315;
+  --crop-card-bg: #111827; /* rich dark card */
   --crop-card-border: #1f2937;
   --crop-card-hover: #22c55e;
 
-  --crop-tag-bg: rgba(34,197,94,0.15);
+  --crop-tag-bg: rgba(34, 197, 94, 0.12);
   --crop-tag-text: #22c55e;
-
-  --crop-price: #22c55e;
-
+  
+  --crop-price: #4ade80;
+  
   --buy-btn-bg: #22c55e;
-  --buy-btn-text: #ffffff;
+  --buy-btn-text: #052e16;
 
-
-
+  
   /* ========= LearnHub ========= */
   --learn-bg: #0f0f0f;
   --learn-heading: #2e7d32;

@@ -234,22 +234,15 @@
 
 /* marketplace */
   --market-bg: #f6f7fb;
-
-  --market-heading: #1e293b;
-  --market-text: #334155;
-
+  --market-heading: #0f172a; 
+  --market-text: #475569; 
   --toggle-btn-bg: #16a34a;
   --toggle-btn-text: #ffffff;
-
   --crop-card-bg: #ffffff;
-  --crop-card-border: #e5e7eb;
-  --crop-card-hover: #22c55e;
-
-  --crop-tag-bg: #dcfce7;
+  --crop-card-border: #e2e8f0; 
+  --crop-card-hover: #22c55e;--crop-tag-bg: #dcfce7;
   --crop-tag-text: #166534;
-
   --crop-price: #16a34a;
-
   --buy-btn-bg: #16a34a;
   --buy-btn-text: #ffffff;
 

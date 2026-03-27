@@ -1,3 +1,5 @@
+
+
 .market-container {
   padding: clamp(90px, 8vw, 120px) clamp(15px, 4vw, 40px);
   background: var(--market-bg);
@@ -15,10 +17,25 @@
   margin-bottom: clamp(30px, 5vw, 50px);
 }
 
-.market-header h1 {
+.market-title {
   color: var(--market-heading);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
+}
+
+.market-subtitle {
+  margin-top: 8px;
+  color: var(--market-text);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.market-loading,
+.market-empty {
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  color: var(--market-text);
 }
 
 /* ========================= */
@@ -43,7 +60,7 @@
 }
 
 /* ========================= */
-/* 🧱 GRID (SMART RESPONSIVE) */
+/* 🧱 GRID */
 /* ========================= */
 
 .market-grid {
@@ -68,7 +85,7 @@
   position: relative;
 }
 
-/* Glow effect */
+/* Glow */
 .crop-card::after {
   content: "";
   position: absolute;
@@ -114,15 +131,34 @@
   padding: clamp(12px, 2vw, 18px);
 }
 
-.crop-details h3 {
+/* Top row (tag + location) */
+.crop-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.crop-location {
+  font-size: 0.85rem;
+  color: var(--market-text);
+  opacity: 0.7;
+}
+
+/* Title */
+.crop-title {
+  margin: 10px 0;
   color: var(--crop-card-hover);
   font-size: clamp(16px, 2vw, 18px);
   font-weight: 600;
 }
 
-.crop-details p {
+/* Meta info */
+.crop-meta {
+  font-size: 14px;
   color: var(--market-text);
-  font-size: clamp(13px, 1.8vw, 14px);
+  opacity: 0.85;
   margin-top: 4px;
 }
 
@@ -131,8 +167,6 @@
 /* ========================= */
 
 .crop-tag {
-  display: inline-block;
-  margin-top: 8px;
   background: var(--crop-tag-bg);
   color: var(--crop-tag-text);
   padding: 4px 10px;
@@ -142,7 +176,7 @@
 }
 
 /* ========================= */
-/* 💰 PRICE ROW */
+/* 💰 PRICE */
 /* ========================= */
 
 .price-row {
@@ -150,7 +184,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap; /* KEY FIX */
+  flex-wrap: wrap;
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid var(--crop-card-border);
@@ -160,6 +194,12 @@
   font-size: clamp(14px, 2vw, 16px);
   font-weight: 700;
   color: var(--crop-price);
+}
+
+.price-unit {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: 3px;
 }
 
 /* ========================= */
@@ -184,7 +224,7 @@
 }
 
 /* ========================= */
-/* 📱 EXTRA SMALL DEVICES */
+/* 📱 MOBILE FIXES */
 /* ========================= */
 
 @media (max-width: 480px) {
