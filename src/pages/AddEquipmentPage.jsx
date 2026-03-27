@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../api/axios";
 import Navbar from "../components/Navbar";
 import "../styles/AddEquipmentPage.css";
 
@@ -20,7 +21,7 @@ const AddEquipmentPage = () => {
     e.preventDefault();
 
     try {
-      await axios.post("/api/equipment", { ...formData });
+      await api.post("/api/equipment", { ...formData });
 
       alert("Equipment Listed Successfully!");
 
