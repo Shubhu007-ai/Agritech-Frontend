@@ -1,10 +1,13 @@
 .market-container {
-  padding: 6em;
+  padding: 110px 30px 30px 30px;
   background-color: var(--market-bg);
   min-height: 100vh;
   color: var(--market-text);
-      padding: 110px 30px 30px 30px;
 }
+
+/* ========================= */
+/* 🧾 HEADER */
+/* ========================= */
 
 .market-header {
   text-align: center;
@@ -14,18 +17,33 @@
 .market-header h1 {
   color: var(--market-heading);
   font-size: 2.5rem;
+  font-weight: 700;
 }
+
+/* ========================= */
+/* 🔘 TOGGLE BUTTON */
+/* ========================= */
 
 .toggle-sell-btn {
   margin-top: 20px;
-  padding: 10px 25px;
-  background-color: var(--toggle-btn-bg);
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--toggle-btn-bg), #6c63ff);
   color: var(--toggle-btn-text);
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
+
+.toggle-sell-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ========================= */
+/* 🧱 GRID */
+/* ========================= */
 
 .market-grid {
   display: grid;
@@ -35,38 +53,81 @@
   margin: 0 auto;
 }
 
+/* ========================= */
+/* 🧾 CARD */
+/* ========================= */
+
 .crop-card {
   background: var(--crop-card-bg);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s;
   border: 1px solid var(--crop-card-border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Glow border */
+.crop-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(120deg, transparent, var(--crop-card-hover), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.crop-card:hover::before {
+  opacity: 1;
 }
 
 .crop-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   border-color: var(--crop-card-hover);
 }
 
+/* ========================= */
+/* 🖼 IMAGE */
+/* ========================= */
+
 .crop-image {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
+
+.crop-card:hover .crop-image {
+  transform: scale(1.08);
+}
+
+/* ========================= */
+/* 📄 DETAILS */
+/* ========================= */
 
 .crop-details {
   padding: 15px;
 }
 
+/* Tag */
 .crop-tag {
-  background: var(--crop-tag-bg);
-  color: var(--crop-tag-text);
-  font-size: 0.8rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-weight: bold;
+  background: linear-gradient(135deg, var(--crop-tag-bg), var(--crop-card-hover));
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-block;
 }
+
+/* ========================= */
+/* 💰 PRICE ROW */
+/* ========================= */
 
 .price-row {
   display: flex;
@@ -78,15 +139,119 @@
 }
 
 .crop-price {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--crop-price);
 }
 
+/* ========================= */
+/* 🛒 BUTTON */
+/* ========================= */
+
 .buy-btn {
-  background: var(--buy-btn-bg);
+  background: linear-gradient(135deg, var(--buy-btn-bg), #4caf50);
   color: var(--buy-btn-text);
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 9px 18px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.buy-btn:active {
+  transform: scale(0.96);
+}
+
+/* ========================= */
+/* 🎬 ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Laptop / Small Desktop */
+@media (max-width: 1200px) {
+  .market-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .market-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .market-container {
+    padding: 100px 20px 20px;
+  }
+
+  .market-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .toggle-sell-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .buy-btn {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .market-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .crop-image {
+    height: 180px;
+  }
+
+  .crop-details {
+    padding: 12px;
+  }
+
+  .buy-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
