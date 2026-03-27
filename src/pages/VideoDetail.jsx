@@ -132,7 +132,7 @@ const VideoDetail = () => {
                   onClick={() => navigate(`/video/${v._id}`)}
                 >
                   <video
-                    src={`${import.meta.env.VITE_BACKEND_URL}${v.videoUrl}`}
+                    src={v.videoUrl}
                     className="related-thumb"
                     muted
                   />
