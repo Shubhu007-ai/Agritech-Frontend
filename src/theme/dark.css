@@ -191,12 +191,12 @@
   /* ========= Marketplace ========= */
   --market-bg: #0f0f0f; 
   --market-heading: #e5e7eb;
-  --market-text: #94a3b8; 
+  --market-text: aliceblue; 
 
   --toggle-btn-bg: #22c55e;
   --toggle-btn-text: #ffffff;
 
-  --crop-card-bg: #333;
+  --crop-card-bg: #1a1a1a;
   --crop-card-border: #1f2937;
   --crop-card-hover: #22c55e;
 
