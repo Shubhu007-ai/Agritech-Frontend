@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "../api/axiosInstance";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   FaBookmark,
   FaRegBookmark,
