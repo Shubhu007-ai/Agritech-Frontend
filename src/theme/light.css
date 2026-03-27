@@ -233,16 +233,20 @@
   --apply-btn-hover: #c8e6c9;
 
 /* marketplace */
-  --market-bg: #f6f7fb;
+  --market-bg: aliceblue;
+
   --market-heading: #0f172a; 
   --market-text: #475569; 
+
   --toggle-btn-bg: #16a34a;
   --toggle-btn-text: #ffffff;
-  --crop-card-bg: #ffffff;
+
+  --crop-card-bg: aliceblue;
   --crop-card-border: #e2e8f0; 
   --crop-card-hover: #22c55e;--crop-tag-bg: #dcfce7;
   --crop-tag-text: #166534;
   --crop-price: #16a34a;
+
   --buy-btn-bg: #16a34a;
   --buy-btn-text: #ffffff;
 
