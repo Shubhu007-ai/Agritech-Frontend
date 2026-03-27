@@ -1,8 +1,9 @@
 .market-container {
-  padding: 110px 30px 30px 30px;
-  background-color: var(--market-bg);
+  padding: clamp(90px, 8vw, 120px) clamp(15px, 4vw, 40px);
+  background: var(--market-bg);
   min-height: 100vh;
   color: var(--market-text);
+  transition: all 0.3s ease;
 }
 
 /* ========================= */
@@ -11,29 +12,29 @@
 
 .market-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: clamp(30px, 5vw, 50px);
 }
 
 .market-header h1 {
   color: var(--market-heading);
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
 }
 
 /* ========================= */
-/* 🔘 TOGGLE BUTTON */
+/* 🔘 BUTTON */
 /* ========================= */
 
 .toggle-sell-btn {
   margin-top: 20px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, var(--toggle-btn-bg), #6c63ff);
+  background: var(--toggle-btn-bg);
   color: var(--toggle-btn-text);
   border: none;
   border-radius: 50px;
-  cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .toggle-sell-btn:hover {
@@ -42,51 +43,49 @@
 }
 
 /* ========================= */
-/* 🧱 GRID */
+/* 🧱 GRID (SMART RESPONSIVE) */
 /* ========================= */
 
 .market-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(16px, 2vw, 30px);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 /* ========================= */
-/* 🧾 CARD */
+/* 🔥 CARD */
 /* ========================= */
 
 .crop-card {
   background: var(--crop-card-bg);
   border-radius: 16px;
-  overflow: hidden;
   border: 1px solid var(--crop-card-border);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  animation: fadeInUp 0.5s ease forwards;
 }
 
-/* Glow border */
-.crop-card::before {
+/* Glow effect */
+.crop-card::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(120deg, transparent, var(--crop-card-hover), transparent);
+  background: radial-gradient(circle at top, rgba(34,197,94,0.15), transparent 70%);
   opacity: 0;
   transition: 0.3s;
 }
 
-.crop-card:hover::before {
+.crop-card:hover::after {
   opacity: 1;
 }
 
 .crop-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   border-color: var(--crop-card-hover);
 }
 
@@ -95,14 +94,16 @@
 /* ========================= */
 
 .crop-image {
-  width: 100%;
-  height: 200px;
+  width: calc(100% - 20px);
+  height: clamp(160px, 25vw, 220px);
   object-fit: cover;
+  border-radius: 12px;
+  margin: 10px;
   transition: transform 0.4s ease;
 }
 
 .crop-card:hover .crop-image {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 /* ========================= */
@@ -110,19 +111,34 @@
 /* ========================= */
 
 .crop-details {
-  padding: 15px;
+  padding: clamp(12px, 2vw, 18px);
 }
 
-/* Tag */
+.crop-details h3 {
+  color: var(--crop-card-hover);
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 600;
+}
+
+.crop-details p {
+  color: var(--market-text);
+  font-size: clamp(13px, 1.8vw, 14px);
+  margin-top: 4px;
+}
+
+/* ========================= */
+/* 🏷 TAG */
+/* ========================= */
+
 .crop-tag {
-  background: linear-gradient(135deg, var(--crop-tag-bg), var(--crop-card-hover));
-  color: #fff;
-  font-size: 0.75rem;
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--crop-tag-bg);
+  color: var(--crop-tag-text);
   padding: 4px 10px;
   border-radius: 50px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  display: inline-block;
 }
 
 /* ========================= */
@@ -133,14 +149,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
-  border-top: 1px solid #f0f0f0;
+  gap: 10px;
+  flex-wrap: wrap; /* KEY FIX */
+  margin-top: 12px;
   padding-top: 10px;
+  border-top: 1px solid var(--crop-card-border);
 }
 
 .crop-price {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 700;
   color: var(--crop-price);
 }
 
@@ -149,109 +167,38 @@
 /* ========================= */
 
 .buy-btn {
-  background: linear-gradient(135deg, var(--buy-btn-bg), #4caf50);
+  background: var(--buy-btn-bg);
   color: var(--buy-btn-text);
   border: none;
-  padding: 9px 18px;
+  padding: 8px 14px;
   border-radius: 8px;
-  cursor: pointer;
   font-weight: 600;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.25s;
+  white-space: nowrap;
 }
 
 .buy-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-.buy-btn:active {
-  transform: scale(0.96);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(34,197,94,0.3);
 }
 
 /* ========================= */
-/* 🎬 ANIMATIONS */
+/* 📱 EXTRA SMALL DEVICES */
 /* ========================= */
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ========================= */
-/* 📱 RESPONSIVE DESIGN */
-/* ========================= */
-
-/* Laptop / Small Desktop */
-@media (max-width: 1200px) {
-  .market-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .market-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .market-header h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .market-container {
-    padding: 100px 20px 20px;
-  }
-
-  .market-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .market-header h1 {
-    font-size: 1.8rem;
-  }
-
+@media (max-width: 480px) {
   .toggle-sell-btn {
     width: 100%;
-    max-width: 250px;
+  }
+
+  .buy-btn {
+    width: 100%;
+    text-align: center;
   }
 
   .price-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-  }
-
-  .buy-btn {
-    width: 100%;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .market-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .crop-image {
-    height: 180px;
-  }
-
-  .crop-details {
-    padding: 12px;
-  }
-
-  .buy-btn {
-    padding: 10px;
-    font-size: 14px;
   }
 }

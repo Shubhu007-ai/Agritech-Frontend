@@ -189,23 +189,27 @@
   --apply-btn-hover: #164d29;
 
   /* ========= Marketplace ========= */
-  --market-bg: #0f0f0f;
+  --market-bg: #0b0f0c;
 
-  --market-heading: #2e7d32;
-  --market-text: #eaeaea;
+  --market-heading: #e5e7eb;
+  --market-text: #9ca3af;
 
-  --toggle-btn-bg: #1f8f3d;
-  --toggle-btn-text: white;
+  --toggle-btn-bg: #22c55e;
+  --toggle-btn-text: #ffffff;
 
-  --crop-card-hover: #2e7d32;
+  --crop-card-bg: #111315;
+  --crop-card-border: #1f2937;
+  --crop-card-hover: #22c55e;
 
-  --crop-tag-bg: #12391f;
-  --crop-tag-text: #2e7d32;
+  --crop-tag-bg: rgba(34,197,94,0.15);
+  --crop-tag-text: #22c55e;
 
-  --crop-price: #eaeaea;
+  --crop-price: #22c55e;
 
-  --buy-btn-bg: #1f8f3d;
-  --buy-btn-text: #f5f5f5;
+  --buy-btn-bg: #22c55e;
+  --buy-btn-text: #ffffff;
+
+
 
   /* ========= LearnHub ========= */
   --learn-bg: #0f0f0f;
