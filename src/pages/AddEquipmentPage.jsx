@@ -21,7 +21,7 @@ const AddEquipmentPage = () => {
     e.preventDefault();
 
     try {
-      await api.post("/api/equipment", { ...formData });
+      await api.post("/equipment", { ...formData });
 
       alert("Equipment Listed Successfully!");
 

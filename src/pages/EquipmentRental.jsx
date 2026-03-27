@@ -16,8 +16,8 @@ const EquipmentRental = () => {
       // If rentee → fetch all equipment
       const url =
         mode === "lessee"
-          ? "/api/equipment/my-equipment"
-          : "/api/equipment";
+          ? "/equipment/my-equipment"
+          : "/equipment";
 
       const res = await api.get(url);
       setEquipment(res.data);
