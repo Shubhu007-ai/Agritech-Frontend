@@ -49,7 +49,7 @@ const Marketplace = () => {
 
         {loading ? (
           <h2 className="market-loading">
-            Loading fresh produce...
+            Loading fresh product...
           </h2>
         ) : (
           <div className="market-grid">
