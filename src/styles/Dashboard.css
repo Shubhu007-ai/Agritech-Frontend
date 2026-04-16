@@ -512,6 +512,142 @@ body,
 }
 
 /* ============================= */
+/* SKELETON LOADING (THEME MATCHED) */
+/* ============================= */
+
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    /* base color matches card */
+    background: rgba(0, 0, 0, 0.05);
+
+    /* subtle border like cards */
+    border: 1px solid var(--card-border);
+}
+
+/* SHIMMER */
+.skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+
+    /* gradient tuned to your theme */
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+/* TEXT VARIANTS */
+.skeleton-text {
+    height: 14px;
+    margin-bottom: 10px;
+
+    /* softer tone instead of grey */
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.title-skel {
+    width: 180px;
+    height: 20px;
+}
+
+.location-skel {
+    width: 120px;
+}
+
+/* HEADER */
+.search-skel {
+    width: 180px;
+    height: 35px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.btn-skel {
+    width: 180px;
+    height: 35px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-start),
+        var(--primary-end)
+    );
+    opacity: 0.4;
+}
+
+/* WEATHER */
+.weather-skel {
+    width: 100%;
+    height: 140px;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* FORECAST */
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    /* mimic icon placeholder */
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.small-text {
+    width: 50px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+.medium {
+    width: 140px;
+    height: 16px;
+}
+
+/* MARKET */
+.badge {
+    width: 60px;
+    height: 25px;
+    border-radius: 20px;
+
+    /* match gradient badge */
+    background: linear-gradient(
+        135deg,
+        var(--primary-start),
+        var(--primary-end)
+    );
+    opacity: 0.35;
+}
+
+/* TOOL */
+.tool-skel {
+    height: 70px;
+
+    /* match tool cards */
+    background: linear-gradient(
+        135deg,
+        var(--primary-start),
+        var(--primary-end)
+    );
+    opacity: 0.3;
+}
+
+/* ============================= */
 /* LARGE SCREENS (1200px+) */
 /* ============================= */
 @media (min-width: 1200px) {

@@ -260,13 +260,81 @@ const Dashboard = () => {
       m.crop.toLowerCase().includes(search.toLowerCase()),
   );
 
-  if (loading)
-    return (
-      <>
-        {" "}
-        <Navbar /> <Loader />{" "}
-      </>
-    );
+ if (loading)
+  return (
+    <>
+      <Navbar />
+
+      <div className="dash-container">
+        {/* HEADER SKELETON */}
+        <div className="dash-header">
+          <div className="header-left">
+            <div className="skeleton skeleton-text title-skel"></div>
+            <div className="skeleton skeleton-text location-skel"></div>
+          </div>
+
+          <div className="header-right">
+            <div className="skeleton search-skel"></div>
+            <div className="skeleton btn-skel"></div>
+          </div>
+        </div>
+
+        {/* GRID */}
+        <div className="dashboard-grid">
+          <div className="left-column">
+            {/* WEATHER CARD */}
+            <div className="card weather-card">
+              <div className="skeleton skeleton-box weather-skel"></div>
+            </div>
+
+            {/* FORECAST */}
+            <div className="card forecast-card">
+              <div className="forecast-list">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="forecast-item">
+                    <div className="skeleton circle"></div>
+                    <div className="skeleton small-text"></div>
+                    <div className="skeleton small-text"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* MARKET */}
+          <div className="card market-card">
+            <div className="skeleton skeleton-text medium"></div>
+
+            <div className="market-list">
+              {[...Array(6)].map((_, i) => (
+                <div key={i} className="market-item">
+                  <div>
+                    <div className="skeleton skeleton-text"></div>
+                    <div className="skeleton skeleton-text small"></div>
+                  </div>
+                  <div className="skeleton badge"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ALERT */}
+        <div className="card alert-card">
+          <div className="skeleton skeleton-text"></div>
+        </div>
+
+        {/* TOOLS */}
+        <div className="tools-grid">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="tool-card skeleton tool-skel"></div>
+          ))}
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
 
   /* -----------------------------
        UI
